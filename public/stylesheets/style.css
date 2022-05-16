@@ -1,8 +1,86 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background: e9f1f7;
+}
+
+.board-title {
+  color: #005678;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.messages-list {
+  min-height: 65vh;
+  margin-top: 1rem;
+  padding: 25px;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  list-style: none;
+}
+
+.messages-list > li {
+  padding: 20px;
+  width: 50vw;
+  display: flex;
+  flex-flow: column;
+  gap: 0.2rem;
+  word-break: break-word;
+  border-radius: 12px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.297);
+}
+
+.message-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.message-user {
+  font-size: 0.8rem;
+  color: rgb(92, 92, 92);
+}
+
+.message-added {
+  margin-top: 0.7rem;
+  font-size: 0.5rem;
+}
+
+.new-message-btn {
+  min-width: max-content;
+  margin-top: 1.6rem;
+  padding: 1rem;
+  border-radius: 32px;
+  background-color: #fff;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.297);
+}
+
+.new-message-btn > a {
+  font-size: 1.2rem;
+  color: rgb(22, 111, 188);
+
+  text-decoration: none;
+}
+
+.github-text {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  color: rgb(109, 109, 109);
+}
+
+.github-text > a {
+  text-decoration: none;
+  color: rgb(112, 95, 75);
 }
