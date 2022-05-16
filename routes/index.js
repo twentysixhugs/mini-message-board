@@ -12,7 +12,11 @@ router.get('/new', function (req, res, next) {
 });
 
 router.post('/new', function (req, res, next) {
-  addMessage(req.body.messageText, req.body.messageUser);
+  addMessage(
+    req.body.messageText ||
+      'Hugs are definitely the best thing that exists in this world.',
+    req.body.messageUser || 'Anonymous',
+  );
   res.redirect('/');
 });
 
