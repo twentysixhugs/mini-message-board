@@ -1,12 +1,19 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const { addMessage } = require('./modules/messages');
 
-var indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 
-var app = express();
+const app = express();
+
+// populate with sample messages
+(() => {
+  addMessage('Hi there', 'Amando');
+  addMessage('Hello World!', 'Charles');
+})();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
