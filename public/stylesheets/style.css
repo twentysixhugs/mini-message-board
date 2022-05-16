@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  padding: 50px;
+  padding: 40px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   min-height: 100vh;
@@ -13,14 +13,25 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background: e9f1f7;
+  background: #e9f1f7;
 }
 
-.board-title {
+@media (max-width: 500px) {
+  body {
+    padding: 10px;
+  }
+}
+
+/* General */
+
+.board-title,
+.new-message__title {
   color: #005678;
   font-size: 2rem;
   font-weight: bold;
 }
+
+/* Messages (index) */
 
 .messages-list {
   min-height: 65vh;
@@ -41,6 +52,8 @@ body {
   word-break: break-word;
   border-radius: 12px;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.297);
+  background: #ffffff;
+  color: rgb(60, 78, 93);
 }
 
 .message-text {
@@ -62,16 +75,17 @@ body {
   min-width: max-content;
   margin-top: 1.6rem;
   padding: 1rem;
-  border-radius: 32px;
-  background-color: #fff;
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.297);
-}
 
-.new-message-btn > a {
   font-size: 1.2rem;
   color: rgb(22, 111, 188);
 
   text-decoration: none;
+
+  border-radius: 32px;
+  background-color: #fff;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.297);
+
+  cursor: pointer;
 }
 
 .github-text {
@@ -81,6 +95,81 @@ body {
 }
 
 .github-text > a {
-  text-decoration: none;
-  color: rgb(112, 95, 75);
+  color: rgb(22, 111, 188);
+}
+
+/* New message */
+
+.new-message {
+  display: flex;
+  flex-flow: column;
+}
+
+.c-message-form__input-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.c-message-form__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.c-message-form__name-input,
+.c-message-form__message-input {
+  color: rgb(72, 72, 72);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.121);
+}
+
+.c-message-form__name-input:focus,
+.c-message-form__message-input:focus {
+  outline: none !important;
+  border: 1px solid rgba(89, 163, 192, 0.792);
+}
+
+.c-message-form__name-input {
+  margin-top: 0.5rem;
+  width: 55vw;
+  min-height: 2.5rem;
+  padding-inline: 0.5rem;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.022);
+}
+
+.c-message-form__message-input {
+  margin-top: 20px;
+  width: 55vw;
+  height: 60vh;
+  padding: 0.7rem 0.5rem;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  resize: none;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.042);
+}
+
+.new-message__back {
+  color: rgb(22, 111, 188);
+}
+
+.new-message__actions-wrapper {
+  margin: 1.5rem 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-message-form__submit-btn {
+  width: max-content;
+  min-height: 2rem;
+  padding: 1rem 1.5rem;
+
+  background: rgb(22, 111, 188);
+  color: #fff;
+  border-radius: 32px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.297);
+
+  cursor: pointer;
 }
