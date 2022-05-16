@@ -16,12 +16,6 @@ body {
   background: #e9f1f7;
 }
 
-@media (max-width: 500px) {
-  body {
-    padding: 10px;
-  }
-}
-
 /* General */
 
 .board-title,
@@ -29,6 +23,17 @@ body {
   color: #005678;
   font-size: 2rem;
   font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 40px 10px;
+  }
+
+  .board-title,
+  .new-message__title {
+    font-size: 1.5rem;
+  }
 }
 
 /* Messages (index) */
@@ -56,6 +61,12 @@ body {
   color: rgb(60, 78, 93);
 }
 
+@media (max-width: 1000px) {
+  .messages-list > li {
+    width: 80vw;
+  }
+}
+
 .message-text {
   font-size: 1.2rem;
   line-height: 1.6;
@@ -68,7 +79,7 @@ body {
 
 .message-added {
   margin-top: 0.7rem;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .new-message-btn {
